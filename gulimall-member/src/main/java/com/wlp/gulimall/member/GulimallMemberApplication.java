@@ -2,7 +2,16 @@ package com.wlp.gulimall.member;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
+/**
+ * 1、想要远程调用别的服务
+ * 1）引入open-feign
+ * 2）编写一个接口，告诉springcloud这个接口需要调用远程服务
+ * 	1、声明接口的每个方法都是调用哪个
+ *
+ */
+@EnableDiscoveryClient
 @SpringBootApplication
 public class GulimallMemberApplication {
 
